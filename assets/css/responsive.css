@@ -1,0 +1,25 @@
+/* Customer pages */
+@media (max-width: 700px) {
+  .product-grid{grid-template-columns:repeat(auto-fill, minmax(130px,1fr));gap:8px;padding:10px;}
+  .cart-drawer{max-width:100%;right:-100%;}
+  .invoice-box{margin:10px;padding:16px;max-width:none;}
+}
+
+/* Admin panel */
+@media (max-width: 900px) {
+  .admin-wrap{flex-direction:column;}
+  .sidebar{width:100%;flex-direction:row;overflow-x:auto;padding:10px;}
+  .sidebar .brand{display:none;}
+  .sidebar a{white-space:nowrap;border-left:none;border-bottom:3px solid transparent;padding:8px 12px;}
+  .sidebar a.active{border-bottom-color:var(--primary);}
+  .sidebar a.logout{margin-top:0;}
+  .main{padding:14px;}
+  .form-row{flex-direction:column;}
+  .stat-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media print {
+  .topbar, .invoice-actions, .toast{display:none !important;}
+  .invoice-box{border:none;margin:0;max-width:none;}
+  body{background:#fff;}
+}
